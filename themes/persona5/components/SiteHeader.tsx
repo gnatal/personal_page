@@ -1,6 +1,6 @@
 import { nav, profile } from "@/content/resume";
 import { Collage } from "./Collage";
-import { GameMenu } from "./GameMenu";
+import { GameMenu } from "@/components/GameMenu";
 
 export function SiteHeader() {
   return (

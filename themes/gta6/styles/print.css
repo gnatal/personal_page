@@ -1,0 +1,92 @@
+/* Printing the page gives a plain, ink-friendly resume. */
+@media print {
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+  .site-header,
+  .scene,
+  .hero__actions,
+  .hero__hud,
+  .wanted__stars,
+  .motion-toggle,
+  .ticker,
+  .contacts,
+  .portrait,
+  .hud-stats,
+  .postcard,
+  .phone__top,
+  .phone__compose,
+  .project__links,
+  .terminal,
+  .section-head__kicker,
+  .toast__kicker,
+  .toast__badge,
+  .mission__no,
+  .site-footer__note {
+    display: none !important;
+  }
+  .hero { display: block; min-height: 0; padding: 0; overflow: visible; }
+  .hero__inner, .about { display: block; }
+  .hero__name .visually-hidden {
+    position: static !important;
+    width: auto;
+    height: auto;
+    margin: 0;
+    clip: auto;
+    clip-path: none;
+    white-space: normal;
+    font: 700 24pt/1.1 var(--f-ui);
+  }
+  .hero__first, .hero__last { display: none; }
+  .grad-text {
+    background: none;
+    color: #000;
+    -webkit-text-fill-color: #000;
+    filter: none !important;
+  }
+  .section-head { margin: 18pt 0 6pt; }
+  .section-head__title { font: 700 15pt/1.2 var(--f-ui); }
+  .hero__role, .hero__aside { display: block; margin: 6pt 0 0; }
+  .neon, .wanted__label, .mission__years, .tag, .bubble {
+    color: #000;
+    background: none;
+    border: 0;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0;
+  }
+  .hero__role { display: block; }
+  .neon { display: inline; }
+  .visually-hidden + .neon::before { content: " · "; }
+  .hero__aside, .wanted { justify-items: start; text-align: left; }
+  .wanted { margin: 4pt 0 0; }
+  .phone { max-width: none; }
+  .phone__screen { overflow: visible; border-radius: 0; }
+  .mission__title, .project__name { font: 700 13pt/1.25 var(--f-ui); text-transform: none; margin-top: 2pt; }
+  .mission__years { font: 700 10pt/1.2 var(--f-ui); }
+  .hero__stack, .hero__dot, .mission__title, .mission__meta, .mission__meta b, .mission__points,
+  .project__tagline, .project__desc, .skills__row dt, .skills__sep, .toast__meta, .toast__meta b,
+  .contact__lead, .contact__plain, .contact__plain a, .tok-com, .tok-str, .tok-pre, .tok-kw, .tok-type, .tok-num {
+    color: #000;
+    text-shadow: none;
+  }
+  .phone, .phone__screen, .mission__card, .project, .stats-screen, .skills__row, .toast {
+    background: none;
+    border: 0;
+    box-shadow: none;
+    rotate: none;
+    padding: 0;
+  }
+  .phone__thread { display: block; padding: 0; }
+  .bubble { margin: 0 0 6pt; max-width: none; }
+  .missions { padding: 0; gap: 10pt; }
+  .missions::before, .mission::before, .project::before, .mission__points li::before { display: none; }
+  .mission__points { list-style: disc; }
+  .tags { gap: 2pt 8pt; }
+  .mission, .project, .toast { break-inside: avoid; }
+  .project--featured { display: block; }
+  .site-footer { background: none; color: #000; }
+  .site-footer::before { display: none; }
+}

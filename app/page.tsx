@@ -1,13 +1,15 @@
-import { About } from "@/components/About";
-import { Contact } from "@/components/Contact";
-import { Credentials } from "@/components/Credentials";
-import { Experience } from "@/components/Experience";
-import { Hero } from "@/components/Hero";
-import { Projects } from "@/components/Projects";
-import { SiteFooter } from "@/components/SiteFooter";
-import { SiteHeader } from "@/components/SiteHeader";
-import { Skills } from "@/components/Skills";
-import { Ticker } from "@/components/Ticker";
+import {
+  About,
+  Contact,
+  Credentials,
+  Experience,
+  Hero,
+  Projects,
+  SiteFooter,
+  SiteHeader,
+  Skills,
+  Ticker,
+} from "@theme";
 import { experience, profile } from "@/content/resume";
 
 export default function Home() {

@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 type Item = { id: string; label: string };
 
 /**
- * Persona-style menu. The ▶ cursor follows the section you are reading:
+ * Section menu. The current item follows the section you are reading:
  * a small IntersectionObserver marks the matching link with aria-current.
  * Without JS the links still work; only the cursor tracking is lost.
  */

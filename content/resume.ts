@@ -47,9 +47,9 @@ export const profile = {
   name: "Guilherme Natal",
   firstName: "Guilherme",
   lastName: "Natal",
-  /** Collage logo in the top-left corner. */
+  /** Logo text in the top-left corner. */
   brand: "G.Natal",
-  /** Two tape strips under your name: the first is white, the second red. */
+  /** Two labels under your name (white and red tape in Persona 5, pink and cyan neon in GTA 6). */
   role: ["Full-stack engineer", "Engineering leader"],
   /** Used for the browser tab title and link previews. */
   headline: "Senior full-stack engineer and engineering leader",
@@ -59,6 +59,8 @@ export const profile = {
   location: "Mendoza, Argentina",
   locationShort: "Mendoza, AR",
   timezone: "UTC-3",
+  /** GTA 6 theme only: the line next to the five stars in the hero. Leave "" to hide the stars. */
+  availability: "Open to fractional CTO and senior contract work",
   stack: ["TypeScript", "React", "Node.js", "Go", "Python"],
   email: "guilhermenatal47@gmail.com",
   linkedin: "https://www.linkedin.com/in/guilherme-natal/",
@@ -67,7 +69,7 @@ export const profile = {
   spokenLanguages: ["Portuguese", "Spanish", "English"],
 };
 
-/** The three stamps next to your photo. */
+/** The three stats next to your photo (stamps in Persona 5, HUD readouts in GTA 6). */
 export const stats = [
   { value: "9+", label: "Years shipping" },
   { value: "40K", label: "Users scaled" },

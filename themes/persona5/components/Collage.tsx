@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { collage, type CollageOptions } from "@/lib/collage";
+import { collage, type CollageOptions } from "../lib/collage";
 
 type Props = CollageOptions & {
   text: string;

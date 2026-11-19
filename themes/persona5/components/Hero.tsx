@@ -1,7 +1,7 @@
 import { Fragment, type CSSProperties } from "react";
 import { profile, stats } from "@/content/resume";
 import { Collage } from "./Collage";
-import { MotionToggle } from "./MotionToggle";
+import { MotionToggle } from "@/components/MotionToggle";
 
 const delay = (s: string) => ({ "--delay": s }) as CSSProperties;
 

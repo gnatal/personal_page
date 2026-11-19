@@ -2,8 +2,8 @@
 
 ## Stage (Hugo theme)
 
-The visual design, CSS and the collage algorithm in this site are adapted from
-Stage, https://github.com/basteez/hugo-theme-stage
+The Persona 5 theme's visual design, CSS and collage algorithm, and the page
+structure shared by both themes, are adapted from Stage, https://github.com/basteez/hugo-theme-stage
 
 ```
 MIT License
@@ -36,12 +36,13 @@ licensed under the Apache License 2.0 (https://github.com/gohugoio/hugo).
 
 ## Fonts
 
-All fonts in `app/fonts/` are licensed under the SIL Open Font License 1.1.
+All fonts in `fonts/` are licensed under the SIL Open Font License 1.1.
 Each licence file sits next to its font:
 
-- `app/fonts/LICENSE-anton.txt`
-- `app/fonts/LICENSE-courier-prime.txt`
-- `app/fonts/LICENSE-dela-gothic-one.txt`
-- `app/fonts/LICENSE-fira-code.txt`
-- `app/fonts/LICENSE-fraunces.txt`
-- `app/fonts/LICENSE-literata.txt`
+- `fonts/LICENSE-anton.txt`
+- `fonts/LICENSE-courier-prime.txt`
+- `fonts/LICENSE-dela-gothic-one.txt`
+- `fonts/LICENSE-fira-code.txt`
+- `fonts/LICENSE-fraunces.txt`
+- `fonts/LICENSE-inter.txt` (Inter 4, subset to Latin and saved as WOFF)
+- `fonts/LICENSE-literata.txt`
