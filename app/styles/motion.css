@@ -1,0 +1,65 @@
+/* One orchestrated entrance in the hero; nothing moves on its own further down
+   except the ticker, which can be paused. */
+@keyframes slam-l { from { transform: translateX(-110vw); } to { transform: none; } }
+@keyframes drop { from { transform: translateY(-60vh) rotate(-30deg); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+.slam-l { animation: slam-l 0.45s var(--ease-slam) both; animation-delay: var(--delay, 0s); }
+.drop { animation: drop 0.5s cubic-bezier(0.2, 1.6, 0.4, 1) both; animation-delay: var(--delay, 0s); }
+.blink { animation: blink 1s steps(1) 4; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+  }
+  /* no marquee: show the whole ticker text, wrapped */
+  .ticker__track { animation: none !important; transform: skewX(14deg); width: auto; }
+  .ticker__track p { white-space: normal; padding-inline: 14px; line-height: 1.6; }
+  .ticker__track p + p { display: none; }
+}
+
+/* The starburst and ticker keep moving, so they can be paused (WCAG 2.2.2):
+   the ticker on hover/focus, everything with the "Pause motion" button. */
+.ticker:hover .ticker__track,
+.ticker:focus-within .ticker__track {
+  animation-play-state: paused;
+}
+html[data-motion="paused"] .hero__burst,
+html[data-motion="paused"] .ticker__track {
+  animation-play-state: paused;
+}
+
+.motion-toggle {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px 12px;
+  font: 700 12px/1 var(--f-mono);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  background: var(--black);
+  border: 2px solid var(--white);
+  transform: skewX(var(--skew));
+}
+.motion-toggle > span {
+  display: block;
+  transform: skewX(14deg);
+}
+.motion-toggle:hover {
+  background: var(--red);
+}
+.motion-toggle[aria-pressed="true"] {
+  background: var(--white);
+  color: var(--black);
+}
+@media (prefers-reduced-motion: reduce) {
+  .motion-toggle { display: none; }
+}

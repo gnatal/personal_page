@@ -1,0 +1,36 @@
+/*
+ * Visual design adapted from Stage, a Hugo theme by Tiziano Basile
+ * https://github.com/basteez/hugo-theme-stage (MIT, see THIRD_PARTY_NOTICES.md).
+ *
+ * Stage palette: red #e60012, black, white. Neutrals are tints of black/white,
+ * for small text that must pass WCAG AA. If you change --red, recheck contrast.
+ */
+:root {
+  --red: #e60012;
+  --black: #000;
+  --white: #fff;
+
+  --ink: #111;
+  --ink-muted: #4d4d4d; /* 8.6:1 on white */
+  --red-on-black: #ff3344; /* 5.8:1 on black, for small red text on slabs */
+  --code-comment: #a6a6a6;
+
+  /* Fonts come from next/font (layout.tsx) as CSS variables. */
+  --f-display: var(--font-dela), "Arial Black", Impact, sans-serif;
+  --f-body: var(--font-literata), Georgia, "Times New Roman", serif;
+  --f-mono: var(--font-fira-code), ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --f-note: var(--font-fraunces), Georgia, serif;
+  --f-type: var(--font-courier), "Courier New", monospace;
+  --f-poster: var(--font-anton), Impact, sans-serif;
+
+  --skew: -14deg;
+  --gutter: max(16px, env(safe-area-inset-left, 0px));
+  --gutter-r: max(16px, env(safe-area-inset-right, 0px));
+  --wrap: 1180px;
+  --measure: 68ch;
+
+  --ease-slam: cubic-bezier(0.2, 1.4, 0.4, 1);
+  --ease-pop: cubic-bezier(0.2, 1.7, 0.4, 1);
+
+  color-scheme: light;
+}
